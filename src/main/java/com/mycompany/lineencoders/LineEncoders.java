@@ -23,7 +23,7 @@ public class LineEncoders extends javax.swing.JFrame {
     public LineEncoders() {
         initComponents();
         g=jPanel1.getGraphics();
-        setSize(627,520);
+        setSize(645,580);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
     }
@@ -48,6 +48,7 @@ public class LineEncoders extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(614, 480));
@@ -62,7 +63,7 @@ public class LineEncoders extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Polar");
+        jButton2.setText("Polar NRZ-L");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -94,7 +95,7 @@ public class LineEncoders extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 306, Short.MAX_VALUE)
         );
 
         textField1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -126,6 +127,13 @@ public class LineEncoders extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setText("Polar NRZ-I");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -134,73 +142,85 @@ public class LineEncoders extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 10, Short.MAX_VALUE))
+                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 10, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(162, 162, 162))
+                        .addGap(169, 169, 169))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(98, 98, 98))))
+                        .addGap(87, 87, 87))))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton4, jButton5, jTextField1, jTextField3});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jTextField1, jTextField3});
 
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(textField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1)
                         .addGap(18, 18, 18)
                         .addComponent(jButton2)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton6)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton4, jButton5, jTextField1});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton5, jButton6, jTextField1, jTextField3});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -210,9 +230,22 @@ public class LineEncoders extends javax.swing.JFrame {
         // TODO add your handling code here:
         Graphics2D g2d=(Graphics2D) g;
         g2d.setPaint(Color.BLACK);
+        float[] dash1 = { 2f, 0f, 2f };
+        BasicStroke bs1 = new BasicStroke(1, 
+        BasicStroke.CAP_BUTT, 
+        BasicStroke.JOIN_ROUND, 
+        1.0f, 
+        dash1,
+        2f);
+        g2d.setStroke(bs1);
+        int temp=80;
+        for(int i=0;i<8;i++){
+            g2d.drawLine(temp, 40, temp, 260);
+            temp+=40;
+        }
         g2d.setStroke(new BasicStroke(4));
         g2d.drawLine(40,40,40,260);
-        g2d.drawLine(40,150,360,150);
+        g2d.drawLine(40,150,380,150);
         
         String dataCode =jTextField1.getText();
         textField2.setText("Differntial Manchester");
@@ -268,9 +301,23 @@ public class LineEncoders extends javax.swing.JFrame {
         // TODO add your handling code here:
         Graphics2D g2d=(Graphics2D) g;
         g2d.setPaint(Color.BLACK);
+        float[] dash1 = { 2f, 0f, 2f };
+        BasicStroke bs1 = new BasicStroke(1, 
+        BasicStroke.CAP_BUTT, 
+        BasicStroke.JOIN_ROUND, 
+        1.0f, 
+        dash1,
+        2f);
+        g2d.setStroke(bs1);
+        int temp=80;
+        for(int i=0;i<8;i++){
+            g2d.drawLine(temp, 40, temp, 260);
+            temp+=40;
+        }
+
         g2d.setStroke(new BasicStroke(4));
         g2d.drawLine(40,40,40,260);
-        g2d.drawLine(40,150,360,150);
+        g2d.drawLine(40,150,380,150);
         
         String dataCode =jTextField1.getText();
         textField2.setText("Manchester");
@@ -337,9 +384,23 @@ public class LineEncoders extends javax.swing.JFrame {
         // TODO add your handling code here:
         Graphics2D g2d=(Graphics2D) g;
         g2d.setPaint(Color.BLACK);
+        float[] dash1 = { 2f, 0f, 2f };
+        BasicStroke bs1 = new BasicStroke(1, 
+        BasicStroke.CAP_BUTT, 
+        BasicStroke.JOIN_ROUND, 
+        1.0f, 
+        dash1,
+        2f);
+        g2d.setStroke(bs1);
+        int temp=80;
+        for(int i=0;i<8;i++){
+            g2d.drawLine(temp, 40, temp, 260);
+            temp+=40;
+        }
+
         g2d.setStroke(new BasicStroke(4));
         g2d.drawLine(40,40,40,260);
-        g2d.drawLine(40,150,360,150);
+        g2d.drawLine(40,150,380,150);
         
         String dataCode =jTextField1.getText();
         textField2.setText("UniPolar");
@@ -369,12 +430,26 @@ public class LineEncoders extends javax.swing.JFrame {
         // TODO add your handling code here:
         Graphics2D g2d=(Graphics2D) g;
         g2d.setPaint(Color.BLACK);
+        float[] dash1 = { 2f, 0f, 2f };
+        BasicStroke bs1 = new BasicStroke(1, 
+        BasicStroke.CAP_BUTT, 
+        BasicStroke.JOIN_ROUND, 
+        1.0f, 
+        dash1,
+        2f);
+        g2d.setStroke(bs1);
+        int temp=80;
+        for(int i=0;i<8;i++){
+            g2d.drawLine(temp, 40, temp, 260);
+            temp+=40;
+        }
+
         g2d.setStroke(new BasicStroke(4));
         g2d.drawLine(40,40,40,260);
-        g2d.drawLine(40,150,360,150);
+        g2d.drawLine(40,150,380,150);
         
         String dataCode =jTextField1.getText();
-        textField2.setText("Polar");
+        textField2.setText("Polar NRZ-L");
         int x=40;
         int y=150;
         for(int i=0;i<dataCode.length();i++){
@@ -402,9 +477,54 @@ public class LineEncoders extends javax.swing.JFrame {
         Graphics2D g2d=(Graphics2D) g;
         textField2.setText("");
         g2d.setColor(Color.WHITE);
-        g2d.fillRect(4,4,400,300);
+        g2d.fillRect(10,20,390,280);
         
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        Graphics2D g2d=(Graphics2D) g;
+        g2d.setPaint(Color.BLACK);
+        float[] dash1 = { 2f, 0f, 2f };
+        BasicStroke bs1 = new BasicStroke(1, 
+        BasicStroke.CAP_BUTT, 
+        BasicStroke.JOIN_ROUND, 
+        1.0f, 
+        dash1,
+        2f);
+        g2d.setStroke(bs1);
+        int temp=80;
+        for(int i=0;i<8;i++){
+            g2d.drawLine(temp, 40, temp, 260);
+            temp+=40;
+        }
+
+        g2d.setStroke(new BasicStroke(4));
+        g2d.drawLine(40,40,40,260);
+        g2d.drawLine(40,150,380,150);
+        
+        String dataCode =jTextField1.getText();
+        textField2.setText("Polar NRZ-I");
+        int x=40;
+        int y=50;
+        for(int i=0;i<dataCode.length();i++){
+            if(dataCode.charAt(i)=='1'){
+                g2d.setPaint(Color.BLUE);
+                int y1=y==50?250:50;
+                g2d.drawLine(x,y,x,y1);
+                g2d.drawLine(x, y1, x+40, y1);
+                x+=40;
+                y=y1;
+            }
+            else{
+                g2d.setPaint(Color.CYAN);
+                g2d.drawLine(x, y, x+40, y);
+                x+=40;
+            }
+            g2d.setPaint(Color.BLACK);
+            g2d.drawString(dataCode.charAt(i)+"", x-25, 30);
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -447,6 +567,7 @@ public class LineEncoders extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
